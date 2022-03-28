@@ -1,0 +1,6 @@
+# I do not want to upload the following files and folders
+##########################################################################
+## There is no point to uplad `node_modules` in the git repository. 🙂 ##
+##########################################################################
+
+node_modules
