@@ -2,7 +2,7 @@
 
 - Images are always heavy in size. It is no point to use a very high quality image in a low resolution device while the case is completely different in high resolution one. High resolution devices have high Device Pixcel Ratio (DPR), which demands good quality of images. However, high DPR devices may not need heavy images in some cases. For example, 30x30 sized image. Do you need super high quality image for that?
 - We need width and DPR contorlled image selection method, which makes our images responsive in every devices.
-- Image selection for different types of devices with different width can be possible in html `img` markup tag.
+- Image selection for different types of devices with different width can be possible in html `<img>` markup tag.
 - `srcset` attribute makes things easy for us.
 
 
@@ -12,6 +12,7 @@
     - [By Depending only on DPR](#by-depending-only-on-dpr)
     - [By Specifing Width of Images](#by-specifing-width-of-images)
     - [By Using sizes Attribute](#by-using-size-attribute)
+    - [By Using picture tag]
 - [Special Thanks](#special-thanks)
 - [Author](#author)
 - [Date](#date)
@@ -29,7 +30,7 @@
                  images/clock-1920.jpg 8x" src="images/clock-240.jpg" alt="clocks">
 ```
 
-- The downside of this method: It downloads the image no matter what the width is. Small width `div` containing image does not need to download high quality image. But this method does.
+- The downside of this method: It downloads the image no matter what the width is. Small width `<div>` containing image does not need to download high quality image. But this method does.
 - This method should be avoided.
 
 ### By Specifing Width of Images:
@@ -56,6 +57,20 @@
                  images/clock-1920.jpg 1920w" 
          sizes="(min-width:760px) 50vw, 100vw" 
          src="images/clock-240.jpg" alt="clocks">
+```
+
+### By Using picture Tag:
+
+- The merit of using `<picture>` tag is not to download all the images and then select the right one which goes with devices. `<picture>` tag always download only one image which goes with device and does not need any media query stuffs in css. 
+
+```html
+    <picture>
+        <source media="(min-width: 700px)" 
+                srcset="images/robot-large.jpg">
+        <source srcset="images/robot-small-328.jpg 328w, 
+                        images/robot-small-655.jpg 655w">
+        <img src="images/robot-large.jpg" alt="robot">
+    </picture>
 ```
 
 ## Special Thanks
