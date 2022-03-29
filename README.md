@@ -11,6 +11,7 @@
 - [Possible Ways](#possible-ways)
     - [By Depending only on DPR](#by-depending-only-on-dpr)
     - [By Specifing Width of Images](#by-specifing-width-of-images)
+- [Special Thanks](#special-thanks)
 - [Author](#author)
 - [Date](#date)
 
@@ -42,7 +43,9 @@
                  images/clock-1920.jpg 1920w" src="images/clock-240.jpg" alt="clocks">
 ```
 
+## Special Thanks
 
+- [Kevin Powell YouTube](https://www.youtube.com/watch?v=2QYpkrX2N48)
 
 ## Author
 
