@@ -11,6 +11,7 @@
 - [Possible Ways](#possible-ways)
     - [By Depending only on DPR](#by-depending-only-on-dpr)
     - [By Specifing Width of Images](#by-specifing-width-of-images)
+    - [By Using sizes Attribute](#by-using-size-attribute)
 - [Special Thanks](#special-thanks)
 - [Author](#author)
 - [Date](#date)
@@ -41,6 +42,20 @@
                  images/clock-720.jpg 720w,
                  images/clock-960.jpg 960w,
                  images/clock-1920.jpg 1920w" src="images/clock-240.jpg" alt="clocks">
+```
+
+### By Using size Attribute:
+
+- If the size of images is less than the view port, it is wise to apply the method with `sizes` attribute not to download heavy images.
+
+```html
+    <img srcset="images/clock-240.jpg 240w,
+                 images/clock-480.jpg 480w,
+                 images/clock-720.jpg 720w,
+                 images/clock-960.jpg 960w,
+                 images/clock-1920.jpg 1920w" 
+         sizes="(min-width:760px) 50vw, 100vw" 
+         src="images/clock-240.jpg" alt="clocks">
 ```
 
 ## Special Thanks
